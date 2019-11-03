@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+</head>
+<body>        
+    <input id="first-number" type="number" value="0" placeholder="第一个数字">
+    <input id="second-number" type="number" value="0" placeholder="第二个数字">
+    <button id="add-btn">加</button>
+    <button id="minus-btn">减</button>
+    <button id="times-btn">乘</button>
+    <button id="divide-btn">除</button>
+    <p id="result" >结果是</p>
+    <script>
+       
+       function count(m){
+        var x1=parseFloat(document.getElementById('first-number').value);
+        var x2=parseFloat(document.getElementById('second-number').value);
+        
+           switch(m){
+               case 'add':
+                   result=x1+x2;
+                   break;
+                case 'minus':
+                    result=x1-x2;
+                    break;
+                case 'plus':
+                    result=x1*x2;
+                    break;
+                case 'divide':
+                    result=x1/x2;
+                    break;
+
+           }
+           document.getElementById("result").innerHTML=result;
+       }
+       document.getElementById("add-btn").onclick=function(){
+           count('add');
+       };
+       document.getElementById("minus-btn").onclick=function(){
+           count('minus');
+       };
+       document.getElementById("times-btn").onclick=function(){
+           count('plus');
+       };
+       document.getElementById("divide-btn").onclick=function(){
+           count('divide');
+       };
+       
+
+    </script>
+</body>
+</html>
