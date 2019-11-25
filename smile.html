@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"> 
+<html> 
+<head>
+ <title>  </title>
+ <meta charset="utf-8">
+ <style>
+#t1{
+width:480px;
+height:480px;
+background:url("http://ife.baidu.com/2016/static/img/erik_ce204002.jpg");
+background-repeat:no-repeat;
+background-position-y:0px;}
+
+ 
+ 
+ </style>
+ </head> 
+ <body >
+     
+        <div id='t1' ></div>
+ </body> 
+    <script>
+   var p=document.getElementById('t1');
+   var down=true;
+    function run(){
+        var y=parseInt(p.style.backgroundPositionY);
+        if(y==0){
+            down=true;
+        }
+        else if(y <= -(16*480)){
+            down=false;
+        }
+        if(down){
+            p.style.backgroundPositionY=(y-480)+'px';  
+    }
+        else{
+            p.style.backgroundPositionY=(y+480)+'px';
+         
+    }
+    
+    setTimeout('run()',50);
+    
+}
+run()
+    </script> 
+     
+ </html>
